@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {RoutesDos} from '../../RoutesDos'
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -12,6 +11,7 @@ import Divider from '@material-ui/core/Divider';
 import MenuIcon from '@material-ui/icons/Menu';
 import NavBar from '../navbar/NavBar'
 import logo from '../../logo_blanco.png'
+import { RoutesDos } from '../../RoutesDos';
 
 
 const drawerWidth = 240;

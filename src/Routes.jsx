@@ -5,13 +5,14 @@ import LoginPage from './components/login/LoginPage';
 class Routes extends React.Component{
     
     render(){
-        let {logged, logIn} = this.props;
+        let {logged} = this.props;
         return(
             <Switch>
-                <Route exact path="/" component={LoginPage} />
-                <Route path="/home" component={HomePage} />
-                {/* <Route exact path="/home" component={HomePage} /> */}
-                {/* <Route exact path="/" render={props =>(logged?<Redirect to="/ordenes" />: <LogUserPage {...props} logIn={logIn} />)}/> */}
+               {/*  <Route exact path="/" component={LoginPage} />
+                <Route path="/profile" component={HomePage} /> 
+                <Route exact path="/home" component={HomePage} />*/} 
+                <Route exact path="/" render={props =>(logged?<Redirect to="/profile" />: <LoginPage {...props}/>)}/>
+                <Route path="/profile" render={(props)=>(logged?<HomePage {...props}/>:<Redirect to="/"/>)}/>
             </Switch>
         )
     }

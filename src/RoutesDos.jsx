@@ -7,8 +7,7 @@ export const RoutesDos=(props)=> {
     return(
         <div>
             <Route exact path={`${props.match.url}`} component={Ejemplo} />
-            <Route path={`${props.match.url}/hola`} component={EjemploDos} />
-           
+            <Route path={`${props.match.url}/empresa`} component={EjemploDos} /> 
         </div>
     )
 
